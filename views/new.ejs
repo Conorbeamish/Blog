@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<section class="blog">
+    <h1>Create a new blog post</h1>
+
+    <form class="input-form" autocomplete="off" action="/blog" method="POST">
+        <div class="input-item">
+            Title: <input type="text" name="title" placeholder="Title" required>
+            Publication Date: <input type="date" name="date" required>
+        </div>
+        <div class="input-item">
+            Image 1: <input type="text" name="image1" placeholder="Image 1 URL">
+            Image 2: <input type="text" name="image2" placeholder="Image 2 URL">
+        </div>
+        <div  class="input-item">
+            Content:
+            <textarea class="content-input" name="content" placeholder="Content" rows="30" required></textarea>
+        </div>
+        <button id="submit" class="input-submit">Submit</button>
+    </form>
+</section>
+
+<% include partials/footer %>

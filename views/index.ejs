@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+<section class="blog-banner">
+    <h1>Blog</h1>
+    <a class="dark-link" href="/blog/new">Create New</a>
+</section>
+
+
+<% blog.forEach(function(blog){ %>
+<section class="blog">
+        <div>
+            <h2><%= blog.title %></h2>
+            Written by <em><%= blog.author.username %></em>
+            on <%= blog.date %>
+            <img src=" <%= blog.image1 %> " class="blog-image">
+        </div>
+        <p>
+            <div class="blog-text">
+                <%= blog.content.substring(0, 100)%>...
+            </div>
+            <br>
+            <a href="/blog/<%= blog._id %>">More Info</a>
+        </p>
+</section>
+<% }); %>
+
+<% include partials/footer %>

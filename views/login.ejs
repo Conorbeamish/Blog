@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<section class="login">
+    <form class="login-form" action="/login" method="POST">
+        <h1>Login</h1>
+        <div class="login-text">
+            Username:
+            <input type="text" name="username" placeholder="Username">
+        </div>
+        <div class="login-text">
+            Password:
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <button id="submit" class="input-submit">Login</button>
+    </form>
+</section>
+
+<% include partials/footer %>

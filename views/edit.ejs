@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<section class="blog">
+    <h1>Edit <%=blog.title%></h1>
+
+    <form autocomplete="off" action="/blog/<%= blog._id %>?_method=PUT " method="POST">
+        <div class= "input-item">
+            Title: <input type="text" name="blog[title]" value="<%=blog.title%>"  required>
+            Publication Date: <input type="date" name="blog[date]" value = "<%=blog.date%>" required>
+        </div>
+        <div class="input-item">
+            Image 1: <input type="text" name="blog[image1]" value="<%=blog.image1%>">
+            Image 2: <input type="text" name="blog[image2]" value="<%=blog.image2%>">
+        </div>
+        <div  class="input-item">
+            Content:
+            <textarea class="content-input" name="blog[content]"  rows="30" required><%=blog.content%></textarea>
+        </div>
+        <button id="submit" class="input-submit">Submit</button>
+    </form>
+</section>
+
+<% include partials/footer %>
