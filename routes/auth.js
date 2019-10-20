@@ -45,4 +45,9 @@ router.get("/logout", function(req, res){
     res.redirect("/blog");
 });
 
+//Link in footer
+router.get("/conorbeamish", function(req, res){
+    res.redirect("http://www.conorbeamish.com");
+});
+
 module.exports = router
