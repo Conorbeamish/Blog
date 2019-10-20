@@ -11,7 +11,7 @@ var blogRoutes = require("./routes/blog"),
     authRoutes = require("./routes/auth");
 
 //Connecting to Database
-mongoose.connect("mongodb://localhost/blog", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/blog", {useNewUrlParser: true});
 mongoose.connection.once("open", function(){
     console.log("Connected to database");
 }).on("error", function(error){
